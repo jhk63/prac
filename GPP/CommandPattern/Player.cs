@@ -64,19 +64,19 @@ public class Player : MonoBehaviour
         {
             return new MoveToCommand(this);
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
 		{
 			return new MoveForwardCommand(this);
 		}
-		else if (Input.GetKey(KeyCode.DownArrow))
+		else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
 		{
 			return new MoveBackwardCommand(this);
 		}
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
 		{
 			return new MoveRightCommand(this);
 		}
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
 		{
 			return new MoveLeftCommand(this);
 		}
