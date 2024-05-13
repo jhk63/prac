@@ -48,11 +48,11 @@
 
 ### 코드 사용
 <pre>
-  '''python
+  ```python
   class People():
     def __init__():
       print("Hello")
-  '''
+  ```
 </pre>
 ```python
 def Hello():
