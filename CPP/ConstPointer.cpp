@@ -30,4 +30,6 @@ int main()
 	// ptr2 = &b;
 
 	cout << *ptr2 << endl;
+
+	return 0;
 }
