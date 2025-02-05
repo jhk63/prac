@@ -1,35 +1,29 @@
 
-// Function Pointer
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-
-struct Calculator
-{
-    int (*op)(int, int);
-};
-
-int add(int a, int b)
-{
-    return a + b;
-}
-
-int sub(int a, int b)
-{
-    return a - b;
-}
 
 int main()
 {
-    int a = 5;
-    int b = 2;
+    int x[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-    struct Calculator calc;
+    for (int y : x)
+    {
+        cout << y << " ";
+    }
+    cout << endl;
 
-    calc.op = add;
-    printf("%d + %d = %d \n", a, b, calc.op(a, b));
+    // int *array = new int[5];
+    // for (int i = 0; i < 5; i++)
+    //     array[i] = i + 1;
 
-    calc.op = sub;
-    printf("%d - %d = %d \n", a, b, calc.op(a, b));
+    // for (int num : array)
+    // {
+    //     cout << num << " ";
+    // }
+    // cout << endl;
+
+    // delete[] array;
 
     return 0;
 }
