@@ -5,25 +5,24 @@ using namespace std;
 
 int main()
 {
-    int x[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int n;
+    n = 5;
 
-    for (int y : x)
+    int row = (n + 1) / 2;
+
+    for (int i = 0; i < row; i++)
     {
-        cout << y << " ";
+        for (int j = 0; j < (n / 2) - i; j++)
+            cout << " ";
+        
+        for (int j = 0; j < (2 * i) + 1; j++)
+            cout << "*";
+
+        for (int j = 0; j < (n / 2) - i; j++)
+            cout << " ";
+        
+        cout << endl;
     }
-    cout << endl;
-
-    // int *array = new int[5];
-    // for (int i = 0; i < 5; i++)
-    //     array[i] = i + 1;
-
-    // for (int num : array)
-    // {
-    //     cout << num << " ";
-    // }
-    // cout << endl;
-
-    // delete[] array;
-
+    
     return 0;
 }
