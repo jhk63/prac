@@ -13,8 +13,7 @@ public class GoogleData
 
 public class GoogleSheetManager : MonoBehaviour
 {
-    // const string url = "https://docs.google.com/spreadsheets/d/1VfSK0IHrn7nGOSGL9wzvIbki5p14kE9XTpfSu0fwo04/export?format=tsv&range=A2:B";
-    const string url = "https://script.google.com/macros/s/AKfycbwicpzGcQOF616esK93SqoFD63OsprWQEZUdi0Euc4VQN3Zh3jZCsqsDTQ5l8T8u6BdiQ/exec";
+    const string url = "";
     public GoogleData GD;
     public TMP_InputField IDInput, PWInput, VALUEInput;
     string id, pw;
