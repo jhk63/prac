@@ -1,21 +1,26 @@
 
 #include <iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 
 int main()
 {
-    int n;
-    n = 5;
+    int N = 3;
 
-    cout << (n % 2 ? "SK" : "CY") << endl;
+    vector<float> score = {40, 80, 60};
 
-    int arr[6] = {1, 1, 2, 2, 2, 8};
+    float max = *max_element(score.begin(), score.end());
 
-    for (int i = 0; i < 6; i++)
+    float result = 0;
+    for (int i = 0; i < N; i++)
     {
-        
+        result += score[i] / max * 100;
     }
-    
+    result = result / N;
+
+    cout << result << "\n";
+
     return 0;
 }
