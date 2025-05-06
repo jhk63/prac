@@ -5,6 +5,17 @@
 using namespace std;
 
 
+void test(int& a)
+{
+    cout << a << "\n";
+    cout << &a << "\n";
+    
+    a += 5;
+    
+    cout << a << "\n";
+    cout << &a << "\n";
+}
+
 int main()
 {
     int N = 3;
@@ -21,6 +32,8 @@ int main()
     result = result / N;
 
     cout << result << "\n";
+
+    test(N);
 
     return 0;
 }
