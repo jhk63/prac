@@ -1,39 +1,39 @@
 
 #include <iostream>
-#include <algorithm>
-#include <vector>
+#include <iomanip>
 using namespace std;
 
 
-void test(int& a)
-{
-    cout << a << "\n";
-    cout << &a << "\n";
-    
-    a += 5;
-    
-    cout << a << "\n";
-    cout << &a << "\n";
-}
-
 int main()
 {
-    int N = 3;
+    int C;
+    cin >> C;
 
-    vector<float> score = {40, 80, 60};
-
-    float max = *max_element(score.begin(), score.end());
-
-    float result = 0;
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < C; i++)
     {
-        result += score[i] / max * 100;
+        int N;
+        cin >> N;
+
+        float average = 0;
+        int scores[N];
+        for (int j = 0; j < N; j++)
+        {
+            cin >> scores[j];
+            average += scores[j];
+        }
+        average /= N;
+
+        float result = 0;
+        for (int j = 0; j < N; j++)
+        {
+            if (scores[j] > average)
+            {
+                result += 1;
+            }
+        }
+
+        cout << fixed << setprecision(3) << (result / N) * 100 << "%\n";
     }
-    result = result / N;
-
-    cout << result << "\n";
-
-    test(N);
 
     return 0;
 }
