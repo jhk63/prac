@@ -18,7 +18,7 @@ def delete_exe_files(directory):
             print(f"{i}. {path}")
 
         # 사용자 확인
-        print("\nDo you want to delete these all .exe files? (y/n")
+        print("\nDo you want to delete these all .exe files? (y/n)")
         choice = input().strip().lower()
 
         if choice == 'y':
